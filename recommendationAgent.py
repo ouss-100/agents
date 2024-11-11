@@ -105,14 +105,8 @@ def load_q_table(filename):
 
 
 
-courses = [
-    {"course_id": 101, "title": "Introduction to Data Science", "description": "Learn the basics of data science.", "topic": "Data Science", "difficulty": "Beginner", "language": "English"},
-    {"course_id": 102, "title": "Advanced Machine Learning", "description": "Deep dive into machine learning algorithms.", "topic": "Machine Learning", "difficulty": "Advanced", "language": "English"},
-    {"course_id": 203, "title": "Web Development Bootcamp", "description": "Learn full-stack web development.", "topic": "Web Development", "difficulty": "Intermediate", "language": "French"}
-]
 
-
-def update_Q_value(course_id, feedback, user_id):
+def update_Recommendation_Q_table(course_id, feedback, user_id):
     state_action = (user_id, course_id)
 
     # If Q-value for this state-action pair is not initialized, set it to 0
@@ -132,17 +126,6 @@ def update_Q_value(course_id, feedback, user_id):
 
 
 
-
-
-
-
-# Sample user data
-users = [
-    {"user_id": 1, "name": "Alice", "age": 25, "main_language": "English", "education_level": "Bachelor", 
-     "completed_courses": [101, 102], "preferred_topics": ["Data Science", "Machine Learning"], "recommendation_feedback": []},
-    {"user_id": 2, "name": "Bob", "age": 30, "main_language": "French", "education_level": "Master", 
-     "completed_courses": [], "preferred_topics": ["Web Development", "AI"], "recommendation_feedback": []}
-]
 
 
 

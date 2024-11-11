@@ -79,7 +79,7 @@ def llama_assessment(user_id):
 
 
 
-def update_Q_value(assessments, feedback, user_id):
+def update_Assessment_Q_table(assessments, feedback, user_id):
     state_action = (user_id, assessments)
     
     # Initialize Q-value if not present
@@ -101,19 +101,6 @@ def update_Q_value(assessments, feedback, user_id):
     Q_table[state_action] = new_value
     print(f"Updated Q-value for user {user_id} and assessment {assessments}: {Q_table[state_action]}")
     save_q_table("Assessment_Q_table")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
